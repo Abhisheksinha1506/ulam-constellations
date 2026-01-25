@@ -94,5 +94,14 @@ def evolve(count=50):
     with open(log_path, 'a') as f:
         f.write(f"| {state['n']} | {date_str} |\n```\n{ascii_snapshot}\n``` |\n")
 
+    # Generate human summary
+    primes_today = len(primes_found)
+    summary = f"The prime search has reached N={state['n']}. "
+    summary += f"Today, {primes_today} new primes (celestial bodies) were discovered and added to the constellation map. "
+    summary += "The diagonal clusters characteristic of the Ulam Spiral are becoming more visible in the project's grid."
+
+    with open(os.path.join(base_dir, 'summary.txt'), 'w') as f:
+        f.write(summary)
+
 if __name__ == "__main__":
     evolve()

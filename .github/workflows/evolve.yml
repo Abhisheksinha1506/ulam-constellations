@@ -24,6 +24,11 @@ jobs:
       - name: Run evolution script
         run: python3 evolve.py
 
+      - name: Read Summary
+        id: summary
+        run: |
+          echo "BODY=$(cat summary.txt)" >> $GITHUB_OUTPUT
+
       - name: Create Pull Request
         if: success()
         uses: peter-evans/create-pull-request@v6
@@ -31,7 +36,7 @@ jobs:
           commit-message: "Evolve Prime Spiral - N=${{ github.run_number }}"
           branch: "evolution/star-map"
           title: "Constellation Expansion: Step ${{ github.run_number }}"
-          body: "New primes discovered and mapped to the celestial spiral files."
+          body: ${{ steps.summary.outputs.BODY }}
           delete-branch: true
 
       - name: Report Failure

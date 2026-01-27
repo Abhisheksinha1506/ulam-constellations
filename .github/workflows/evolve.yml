@@ -2,7 +2,7 @@ name: Evolve Prime Spiral
 
 on:
   schedule:
-    - cron: '0 1,7,13,19 * * *' # Run every 6 hours
+    - cron: '30 1,7,13,19 * * *' # Run every 6 hours (IST offset)
   workflow_dispatch:
 
 jobs:

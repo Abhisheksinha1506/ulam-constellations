@@ -4,7 +4,7 @@
 
 ### 📢 Latest Status
 <!-- LATEST_STATUS_START -->
-> The prime search has reached N=1951. Today, 6 new primes (celestial bodies) were discovered and added to the constellation map. The diagonal clusters characteristic of the Ulam Spiral are becoming more visible in the project's grid.
+> The prime search has reached N=2001. Today, 6 new primes (celestial bodies) were discovered and added to the constellation map. The diagonal clusters characteristic of the Ulam Spiral are becoming more visible in the project's grid.
 <!-- LATEST_STATUS_END -->
 
 ### 📖 The Analogy
